@@ -1,0 +1,71 @@
+.header {
+    font-size: 14px;
+    align-items: center;
+    width: 100vw;
+    height: 7vh;
+    background: linear-gradient(#000, #1d1b1b);
+    position: fixed;
+    display: flex;
+    border-bottom: 2px solid gray;
+    /* color: azure; */
+    /* color:burlywood; */
+    color:rgb(221, 190, 11);
+    justify-content: space-between;
+    font-weight: 400;
+}
+#logo {
+    cursor: pointer;
+    margin-left: 5vw;
+    border: 2px solid gray;
+    border-radius: 150px;
+    font-weight: 600;
+    padding: 3px;
+    /* position: absolute; */
+}
+
+#info {
+    align-items: center;
+    padding-right: 5vw;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+#menu div{
+    cursor: pointer;
+}
+#menu div:hover{
+    transition: all ease 0.1s;
+    text-decoration: underline;
+    transform: scale(1.10);
+}
+#menu{
+    align-items: center;
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#darkMode{
+    transition: all ease 0.2s;
+    font-size: 18px;
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+#darkMode:hover{
+    transform: scale(1.2);
+}
+
+@media (max-width:680px) {
+    #info{
+        width: 90px;
+    }
+    #menu{
+        
+    }
+    #menu div{
+        display: none;
+    }
+    
+}
