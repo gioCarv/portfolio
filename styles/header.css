@@ -1,8 +1,10 @@
 .header {
+    margin-top: 0;
+    z-index: 3;
     font-size: 14px;
     align-items: center;
     width: 100vw;
-    height: 7vh;
+    height: 70px;
     background: linear-gradient(#000, #1d1b1b);
     position: fixed;
     display: flex;
@@ -13,14 +15,41 @@
     justify-content: space-between;
     font-weight: 400;
 }
+#logo::before {
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    background-color: red;
+}
 #logo {
+    z-index: 5;
+    margin-top: -5px;
     cursor: pointer;
     margin-left: 5vw;
     border: 2px solid gray;
-    border-radius: 150px;
-    font-weight: 600;
-    padding: 3px;
-    /* position: absolute; */
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 6.25px 1.25px 0px 7.5px gray, 11px 16.5px 7.5px 0px rgb(58, 57, 57), 0px 16.25px 7.5px 0px rgb(58, 57, 57) ;
+    /* box-shadow: 25px 10px 10px 10px gray; */
+    /* animation: moon 1s infinite alternate; */
+}
+#logo::after {
+    box-sizing: border-box;
+    position: absolute;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: -10px;
+    margin-top: -10px;
+    padding-top: 10px;
+    padding-right: 8px;
+    content: 'JS';
+    color: aliceblue;
 }
 
 #info {
