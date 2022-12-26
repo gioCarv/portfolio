@@ -5,45 +5,133 @@
     --color-keyboard: linear-gradient(rgb(190, 185, 185), rgb(180, 178, 178));
     --color-keyboard-keys:linear-gradient(rgb(99, 95, 95), rgb(141, 134, 134));
     --color-moon:gray;
-    --size-Notebook: 0.65
-    
+    /* --color-text: rgb(255,140,0); */
+    --color-text: rgb(160, 138, 12);
+    /* --color-text:rgb(123,104,238); */
+    --color-name: rgb(223, 215, 215) ;
+    --color-pulseFirst:rgb(18, 166, 216);
+    --color-pulseSecond: rgb(6, 6, 141);
+    --size-Notebook: 1.25;
+    --size-moonX: 30px;
+    --size-moonY: 15px;
+    --size-moon:var(var(--size-moonX)) var(var(--size-moonY)) 0 0 var(--color-moon)
+    c
 
 }
 #home{
     font-family: "Inter", sans-serif;
 }
 #homeContainer{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(31, 30, 30) 1%, transparent 95%);
+
+}
+#homeVerticalShadow{
     display: grid;
     width: 100vw;
     height: 100vh;
-    grid-template-columns: 1fr 2fr;
+    background: linear-gradient(to top, rgb(192, 197, 202) 5%, transparent 90%);
+    grid-template-columns: 1fr 1fr;
+
 }
 #homeText{
-    box-sizing: border-box;
-    margin-top: 100px;
-    padding-top: 250px;
-    padding-left: 200px;
-    font-size: 20px;
-}
-#homeText h3{
-    font-size: 35px;
-    color: rgb(17, 122, 207);
+    
+    margin: auto;
+    margin-left: 5vw;
+    font-weight: 400;
+    font-size: 39px;
+    font-family: 'Quando', serif;
     
 }
-#homeText h1{
-    padding-left: 60px;
-    font-size: 45px;
-    color: blue;
+#homeText:nth-child(1){
+    /* color: var(--color-text); */
+
+    
 }
-#homeText div{
-    color: #7d49b4;
+#name{
+    line-height:90px;
+    padding-left: 65px;
+    font-size: 65px;
+    color: var(--color-name);
+    border-right: 5px solid white;
+    animation: blink infinite alternate ease-in-out 0.6s;
 }
+@keyframes blink {
+    0%,45%{
+        padding-right: 5px;
+        border-right: 5px solid transparent;
+    }
+
+    55%,100%{
+        padding-right: 5px;
+        border-right: 5px solid white;
+    }
+    
+}
+#homeText :nth-child(3){
+    /* color: var(--color-text); */
+}
+.home--contactButton{
+    position: relative;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-radius: 15px;
+    padding: 10px 55px 10px 25px;
+    color: aliceblue;
+    background-color: transparent;
+    border: rgb(54, 18, 24) solid 2px;
+    background-color: rgba(77, 72, 72, 0.3);
+    font-size: 24px;
+    font-weight: 500;
+    animation: borderPulse infinite alternate ease-in 2s;
+}
+.home--contactButton img{
+    margin-left: 5px;
+    position: absolute;
+    
+}
+#linkedinIcon{
+    margin-top: -3px;
+    width:30px;
+    height: 30px;
+}
+#githubIcon{
+    margin-top: -7px;
+    width:40px;
+    height: 40px;
+
+}
+.home--contactButton:hover{
+    cursor: pointer;
+    transition: all ease 0.5s;
+    background-color: rgba(77, 72, 72, 0.45) ;
+
+}
+@keyframes borderPulse {
+    0%{
+        border-color:var(--color-pulseFirst);
+    }
+    100%{
+        border-color:var(--color-pulseSecond);
+
+    }
+    
+}
+
+
 #homeNotebook{
     position: relative;
-    margin-top: 100px;
+    margin-top: 80px;
     font-size: 25px;
-    transform:scale(var(--size-Notebook)) ;
+    transform: scale(0.85);
+    display: flex;
+
+    /* transform:scale(var(--size-Notebook)) ; */
+    /* opacity: 0.4; */
 }
+
+     
 .screenAux,.keyboard {
     transform-style: preserve-3d;
     position: absolute;
@@ -53,12 +141,11 @@
     right: 0;
     bottom: 0;
     left: 0;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 300px;
     background-image: var(--color-screen);
     box-shadow: 12px -5px 0px 0px gray;
     transform: rotateY(-45deg);
-    
 }
 .screenAux::after, .keyboard::after,.screen {
     content: '';
@@ -75,26 +162,28 @@
 }
 
 .screenAux::after{
-    width: 500px;
-    height: 300px;
-    margin-top: 270px;
-    margin-left: 160px;
+    /* keyboard */
+    width: 600px;
+    height: 250px;
+    margin-top: 110px;
+    margin-left: 135px;
     box-shadow: 5px 14px 0px 12px var(--color-3dEffect);
 }
 
 .keyboard::after {
-    width: 470px;
+    /* keyboard keys */
+    width: 420px;
     height: 170px;
     background-image: var(--color-keyboard-keys);
     transform: rotateX(65deg);
-    margin-top: 330px;
-    margin-left: 170px;
+    margin-top: 150px;
+    margin-left: 280px;
     /* box-shadow: 2px 5px 0px 2px gray; */
 
 }
 .screen{
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 300px;
     background-image: var(--color-screen);
     box-shadow: 10px -5px 0px 0px var(--color-3dEffect);
     transform: rotateY(-45deg);
@@ -102,29 +191,47 @@
 .screen::before{
     content: '';
     position: absolute;
-    margin: auto;
+    margin-left: 205px;
     margin-top: 75px;
-    width: 250px;
-    height: 250px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    box-shadow: 62.5px 25px 0 0 var(--color-moon);
+    box-shadow: var(--size-moon);
     background-color: transparent;
-    animation: reflex 5s infinite;
+    animation: reflex infinite normal 6s;
+}
+#notebookImg{
+    animation: move infinite alternate ease-in-out 1.75s;
+
+}
+@keyframes move {
+    from{
+       transform: rotateZ(1deg);
+       margin-top: 35px;
+    }
+    to{
+        transform: rotateZ(-1deg);
+        margin-top: 10px;
+    }
 }
 @keyframes reflex {
     0%{
-        box-shadow: 62.5px 25px 0 0 rgb(53, 49, 49);
+        box-shadow: var(--size-moonX) var(--size-moonY) 0 0 rgb(53, 49, 49);
     }
     35%{
         
-        box-shadow: 62.5px 25px 0 0 #221431;
+        box-shadow: var(--size-moonX) var(--size-moonY) 0 0 #ff6d19;
     }
     
-    80% {
-        box-shadow: 62.5px 25px 0 0 rgb(59, 19, 19);
+    50% {
+        box-shadow: var(--size-moonX) var(--size-moonY) 0 0 rgb(46, 12, 12);
+    }
+
+    75%{
+        box-shadow: var(--size-moonX) var(--size-moonY) 0 0 rgb(130, 35, 255);
     }
     
     100%{
-        box-shadow: 62.5px 25px 0 0 rgb(53, 49, 49);
+        box-shadow: var(--size-moonX) var(--size-moonY) 0 0 rgb(53, 49, 49);
     }
 }

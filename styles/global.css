@@ -1,12 +1,23 @@
 @import url("./header.css");
 @import url("./home.css");
+:root{
+    --color-principalLight:rgb(192, 197, 202);
+    /* --color-principalDark:rgb(15, 15, 15); */
+    --color-principalDark:rgb(32, 25, 25);
+    --color-textLigth:black;
+    --color-textDark:rgb(221, 190, 11);
+}
   @keyframes darkMode {
     0%{
-        background-color: rgb(192, 197, 202);
+        /* color: var(--color-principalLight); */
+        background-color: var(--color-principalLight);
+        background: transparent;
     }
   
     100% {
-        background-color: rgb(31, 30, 30);
+        /* color: var(--color-principalDark); */
+        background-color: var(--color-principalDark);
+
     }
 }
 @keyframes moon {
@@ -31,11 +42,13 @@ body {
     height: 300vh;
 }
 .bodyLight{
-    background-color: rgb(192, 197, 202);
-    color: black;
+    background-color: var(--color-principalLight);
+    /* background-color: rgb(189, 191, 194); */
+    color: var(--color-textLigth);
 
 }
 .bodyDark{
-    background-color: rgb(31, 30, 30);
-    color: gray;
+    background-color: var(--color-principalDark);
+    /* background-color: rgb(31, 30, 30); */
+    color: var(--color-textDark);
 }

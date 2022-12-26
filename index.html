@@ -16,6 +16,7 @@
         <div id="info">
             <button onclick='(setDark(), transitionDark())' id='darkMode' class="sun">☀</button>
             <div id="menu">
+                <div>Home</div>
                 <div>Quem sou eu</div>
                 <div>Projetos</div>
                 <div>Contato</div>
@@ -25,23 +26,37 @@
     <!-- HOME -->
     <section id="home">
         <div id="homeContainer">
-            <div id="homeText">
-                <h3>Olá, eu sou o</h2> 
-                <h1>Giovanni</h1>
-                <div>Desenvolvedor Full Stack</div>
+            <div id="homeVerticalShadow">
+                <div id="homeText">
+                    <div>Olá, me chamo</div> 
+                    <span id="name">Giovanni Carvalho,</span>
+                    <div>Desenvolvedor Full Stack.</div>
+                    <button class='home--contactButton'>
+                        <span>Linked</span>
+                        <img  src="imgs/linkedin.png"  id='linkedinIcon' alt="Icone Linkedin"></img>
+                    </button>
+                    <button class='home--contactButton'>
+                        <span>Github</span>
+                        <img  src="imgs/github.png" id='githubIcon' alt="Icone Github"></img>
+                    </button>
+                </div>
+                
+                <div id="homeNotebook">
+                    <img src="imgs/notebook.png" alt="notebook" id="notebookImg">    
+    
+                    <!-- <div class="screenAux "></div>    
+                    <div class="keyboard"></div>    
+                    <div class="screen"></div>     -->
+                </div>
+            </div>
 
             </div>
-            <div id="homeNotebook">
-                <div class="screenAux "></div>    
-                <div class="keyboard"></div>    
-                <div class="screen"></div>    
-            </div>
-        </div>
     </section>
     <!-- Qualificações -->
 
     <!-- Contat -->
     <script src="js/darkmode.js"></script>
+    <script src="js/write.js"></script>
 
 </body>
 <style>

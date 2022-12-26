@@ -1,10 +1,10 @@
 .header {
     margin-top: 0;
     z-index: 3;
-    font-size: 14px;
+    font-size: 19px;
     align-items: center;
     width: 100vw;
-    height: 70px;
+    height: 90px;
     background: linear-gradient(#000, #1d1b1b);
     position: fixed;
     display: flex;
@@ -25,7 +25,7 @@
     z-index: 5;
     margin-top: -5px;
     cursor: pointer;
-    margin-left: 5vw;
+    margin-left: 10vw;
     border: 2px solid gray;
     width: 22px;
     height: 22px;
@@ -54,8 +54,8 @@
 
 #info {
     align-items: center;
-    padding-right: 5vw;
-    width: 350px;
+    padding-right: 10vw;
+    width: 530px;
     display: flex;
     justify-content: space-between;
 }
@@ -69,14 +69,14 @@
 }
 #menu{
     align-items: center;
-    width: 270px;
+    width: 430px;
     display: flex;
     justify-content: space-between;
 }
 
 #darkMode{
     transition: all ease 0.2s;
-    font-size: 18px;
+    font-size: 20px;
     border: none;
     padding: 5px;
     background-color: transparent;
