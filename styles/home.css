@@ -16,6 +16,7 @@
     --size-moonX: 30px;
     --size-moonY: 15px;
     --size-moon: var(var(--size-moonX)) var(var(--size-moonY)) 0 0 var(--color-moon);
+    --size-underlineWidth: 410px
 
 
 }
@@ -82,7 +83,26 @@
 }
 
 #homeText :nth-child(3) {
-    /* color: var(--color-text); */
+    background-repeat: no-repeat;
+    background-size: var(--size-underlineWidth) 2px;
+    background-position: left bottom;
+    animation: UnderlineOffice 5.6s normal;
+}
+.underlineDark{
+    background-image: linear-gradient(rgb(221, 190, 11), transparent);
+}
+.underlineLight{
+    background-image: linear-gradient(rgb(0, 0, 0), transparent);
+
+
+}
+@keyframes UnderlineOffice {
+    0%,70%{
+        background-size: 0px 2px;
+    }
+    100%{
+        background-size: var(--size-underlineWidth) 2px;
+    }
 }
 
 .home--contactButton {
@@ -236,7 +256,8 @@
 @keyframes move {
     from {
         transform: rotateZ(1deg);
-        margin-top: 35px;
+        margin-top: 25px;
+        /* margin-top: 35px; */
     }
 
     to {
@@ -273,8 +294,8 @@
         --size-Notebook: 0.70;
         --size-fontName: 50px;
         --size-fontOtherText: 35px;
-    }
-
+        --size-underlineWidth: 380px;
+        }
     #homeVerticalShadow {
         grid-template-columns: 3fr 2fr;
     }
@@ -289,6 +310,7 @@
         --size-Notebook: 0.70;
         --size-fontName: 45px;
         --size-fontOtherText: 30px;
+        --size-underlineWidth: 318px;
     }
 
     #name {
@@ -301,6 +323,7 @@
         --size-Notebook: 0.70;
         --size-fontName: 40px;
         --size-fontOtherText: 30px;
+        --size-underlineWidth: 0px;
     }
 
     #name {
@@ -315,6 +338,7 @@
     #homeText{
         display: grid;
         padding-top: 90px;
+        margin-left: 0px;
         /* margin-top: 90px; */
         grid-template: 100px
         / 100px

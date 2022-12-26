@@ -8,7 +8,7 @@ const write = (element)=>{
                 element.innerHTML += letter
             }, i*180);
         })      
-    }, 500);
+    }, 600);
 }
 write(title)
 console.log('fui chamado')
