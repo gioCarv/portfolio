@@ -1,10 +1,14 @@
+:root{
+    --size-font: 19px;
+    --size-height:90px;
+}
 .header {
     margin-top: 0;
     z-index: 3;
-    font-size: 19px;
+    font-size: var(--size-font);
     align-items: center;
     width: 100vw;
-    height: 90px;
+    height: var(--size-height);
     background: linear-gradient(#000, #1d1b1b);
     position: fixed;
     display: flex;
@@ -61,11 +65,25 @@
 }
 #menu div{
     cursor: pointer;
+    background-image: linear-gradient(rgb(221, 190, 11), transparent);
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: center bottom;
+    transition-delay: 0.2s;
+    transition: all ease 0.4s;
 }
 #menu div:hover{
-    transition: all ease 0.1s;
-    text-decoration: underline;
+    background-size: 100% 2px;
     transform: scale(1.10);
+    animation: Underline 1s;
+}
+@keyframes Underline {
+    from{
+        border-bottom: 0;
+    }
+    to{
+        border-bottom: 30px;
+    }
 }
 #menu{
     align-items: center;
@@ -84,8 +102,18 @@
 }
 #darkMode:hover{
     transform: scale(1.2);
+    /* transform: rotateZ(-30deg); */
 }
 
+@media (max-width:1000px) {
+    :root{
+        --size-font: 16px;
+        --size-height:70px;
+    }
+    #logo{
+        scale: 0.8;
+    }
+}
 @media (max-width:680px) {
     #info{
         width: 90px;

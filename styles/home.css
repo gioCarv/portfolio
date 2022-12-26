@@ -1,33 +1,37 @@
-
-:root{
-    --color-screen:linear-gradient(rgb(180, 178, 178), rgb(190, 185, 185));
+:root {
+    --color-screen: linear-gradient(rgb(180, 178, 178), rgb(190, 185, 185));
     --color-3dEffect: gray;
     --color-keyboard: linear-gradient(rgb(190, 185, 185), rgb(180, 178, 178));
-    --color-keyboard-keys:linear-gradient(rgb(99, 95, 95), rgb(141, 134, 134));
-    --color-moon:gray;
+    --color-keyboard-keys: linear-gradient(rgb(99, 95, 95), rgb(141, 134, 134));
+    --color-moon: gray;
     /* --color-text: rgb(255,140,0); */
     --color-text: rgb(160, 138, 12);
     /* --color-text:rgb(123,104,238); */
-    --color-name: rgb(223, 215, 215) ;
-    --color-pulseFirst:rgb(18, 166, 216);
+    --color-name: rgb(223, 215, 215);
+    --color-pulseFirst: rgb(18, 166, 216);
     --color-pulseSecond: rgb(6, 6, 141);
-    --size-Notebook: 1.25;
+    --size-fontName: 65px;
+    --size-fontOtherText: 39px;
+    --size-Notebook: 0.75;
     --size-moonX: 30px;
     --size-moonY: 15px;
-    --size-moon:var(var(--size-moonX)) var(var(--size-moonY)) 0 0 var(--color-moon)
-    c
+    --size-moon: var(var(--size-moonX)) var(var(--size-moonY)) 0 0 var(--color-moon);
+
 
 }
-#home{
+
+#home {
     font-family: "Inter", sans-serif;
 }
-#homeContainer{
+
+#homeContainer {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to right, rgb(31, 30, 30) 1%, transparent 95%);
 
 }
-#homeVerticalShadow{
+
+#homeVerticalShadow {
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -35,44 +39,53 @@
     grid-template-columns: 1fr 1fr;
 
 }
-#homeText{
-    
+
+#homeText {
+
     margin: auto;
     margin-left: 5vw;
     font-weight: 400;
-    font-size: 39px;
+    font-size: var(--size-fontOtherText);
     font-family: 'Quando', serif;
-    
+
 }
-#homeText:nth-child(1){
+
+#homeText:nth-child(1) {
     /* color: var(--color-text); */
 
-    
+
 }
-#name{
-    line-height:90px;
+
+#name {
+    line-height: 90px;
     padding-left: 65px;
-    font-size: 65px;
+    font-size: var(--size-fontName);
     color: var(--color-name);
     border-right: 5px solid white;
     animation: blink infinite alternate ease-in-out 0.6s;
 }
+
 @keyframes blink {
-    0%,45%{
+
+    0%,
+    45% {
         padding-right: 5px;
         border-right: 5px solid transparent;
     }
 
-    55%,100%{
+    55%,
+    100% {
         padding-right: 5px;
         border-right: 5px solid white;
     }
-    
+
 }
-#homeText :nth-child(3){
+
+#homeText :nth-child(3) {
     /* color: var(--color-text); */
 }
-.home--contactButton{
+
+.home--contactButton {
     position: relative;
     margin-top: 30px;
     margin-left: 30px;
@@ -86,53 +99,61 @@
     font-weight: 500;
     animation: borderPulse infinite alternate ease-in 2s;
 }
-.home--contactButton img{
+
+.home--contactButton img {
     margin-left: 5px;
     position: absolute;
-    
+
 }
-#linkedinIcon{
+
+#linkedinIcon {
     margin-top: -3px;
-    width:30px;
+    width: 30px;
     height: 30px;
 }
-#githubIcon{
+
+#githubIcon {
     margin-top: -7px;
-    width:40px;
+    width: 40px;
     height: 40px;
 
 }
-.home--contactButton:hover{
+
+.home--contactButton:hover {
     cursor: pointer;
     transition: all ease 0.5s;
-    background-color: rgba(77, 72, 72, 0.45) ;
+    background-color: rgba(77, 72, 72, 0.45);
 
 }
+
 @keyframes borderPulse {
-    0%{
-        border-color:var(--color-pulseFirst);
+    0% {
+        border-color: var(--color-pulseFirst);
     }
-    100%{
-        border-color:var(--color-pulseSecond);
+
+    100% {
+        border-color: var(--color-pulseSecond);
 
     }
-    
+
 }
 
 
-#homeNotebook{
+#homeNotebook {
     position: relative;
     margin-top: 80px;
     font-size: 25px;
-    transform: scale(0.85);
+    /* width: 10vw; */
+    /* transform: scale(0.85); */
     display: flex;
 
-    /* transform:scale(var(--size-Notebook)) ; */
+    transform: scale(var(--size-Notebook));
     /* opacity: 0.4; */
 }
 
-     
-.screenAux,.keyboard {
+
+.screenAux,
+.keyboard {
     transform-style: preserve-3d;
     position: absolute;
     margin: auto;
@@ -147,7 +168,10 @@
     box-shadow: 12px -5px 0px 0px gray;
     transform: rotateY(-45deg);
 }
-.screenAux::after, .keyboard::after,.screen {
+
+.screenAux::after,
+.keyboard::after,
+.screen {
     content: '';
     transform-style: preserve-3d;
     position: absolute;
@@ -161,7 +185,7 @@
     transform: rotateX(65deg);
 }
 
-.screenAux::after{
+.screenAux::after {
     /* keyboard */
     width: 600px;
     height: 250px;
@@ -181,14 +205,16 @@
     /* box-shadow: 2px 5px 0px 2px gray; */
 
 }
-.screen{
+
+.screen {
     width: 600px;
     height: 300px;
     background-image: var(--color-screen);
     box-shadow: 10px -5px 0px 0px var(--color-3dEffect);
     transform: rotateY(-45deg);
 }
-.screen::before{
+
+.screen::before {
     content: '';
     position: absolute;
     margin-left: 205px;
@@ -200,38 +226,103 @@
     background-color: transparent;
     animation: reflex infinite normal 6s;
 }
-#notebookImg{
+
+#notebookImg {
+    max-width: 40vw;
     animation: move infinite alternate ease-in-out 1.75s;
 
 }
+
 @keyframes move {
-    from{
-       transform: rotateZ(1deg);
-       margin-top: 35px;
+    from {
+        transform: rotateZ(1deg);
+        margin-top: 35px;
     }
-    to{
+
+    to {
         transform: rotateZ(-1deg);
         margin-top: 10px;
     }
 }
+
 @keyframes reflex {
-    0%{
+    0% {
         box-shadow: var(--size-moonX) var(--size-moonY) 0 0 rgb(53, 49, 49);
     }
-    35%{
-        
+
+    35% {
+
         box-shadow: var(--size-moonX) var(--size-moonY) 0 0 #ff6d19;
     }
-    
+
     50% {
         box-shadow: var(--size-moonX) var(--size-moonY) 0 0 rgb(46, 12, 12);
     }
 
-    75%{
+    75% {
         box-shadow: var(--size-moonX) var(--size-moonY) 0 0 rgb(130, 35, 255);
     }
-    
-    100%{
+
+    100% {
         box-shadow: var(--size-moonX) var(--size-moonY) 0 0 rgb(53, 49, 49);
+    }
+}
+
+@media (max-width:1300px) {
+    :root {
+        --size-Notebook: 0.70;
+        --size-fontName: 50px;
+        --size-fontOtherText: 35px;
+    }
+
+    #homeVerticalShadow {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .Home--header--genre {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    :root {
+        --size-Notebook: 0.70;
+        --size-fontName: 45px;
+        --size-fontOtherText: 30px;
+    }
+
+    #name {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        --size-Notebook: 0.70;
+        --size-fontName: 40px;
+        --size-fontOtherText: 30px;
+    }
+
+    #name {
+        padding-left: 35px;
+    }
+    #homeVerticalShadow {
+        display:unset;
+        /* display: flex; */
+        text-align: center;
+        justify-content: center;
+    }
+    #homeText{
+        display: grid;
+        padding-top: 90px;
+        /* margin-top: 90px; */
+        grid-template: 100px
+        / 100px
+        / 100px
+        / 1fr 1fr ;
+    }
+    #homeNotebook {
+        display: none;
+         
     }
 }

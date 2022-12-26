@@ -14,7 +14,7 @@
     <div class="header">
         <div id="logo"> </div>
         <div id="info">
-            <button onclick='(setDark(), transitionDark())' id='darkMode' class="sun">☀</button>
+            <button onclick='(setDark(), transitionDark())' id='darkMode' class="sun">🌞</button>
             <div id="menu">
                 <div>Home</div>
                 <div>Quem sou eu</div>
@@ -31,11 +31,11 @@
                     <div>Olá, me chamo</div> 
                     <span id="name">Giovanni Carvalho,</span>
                     <div>Desenvolvedor Full Stack.</div>
-                    <button class='home--contactButton'>
+                    <button class='home--contactButton' onclick="externalLink('https://www.linkedin.com/in/giovanni-carvalho-871812111/')">
                         <span>Linked</span>
                         <img  src="imgs/linkedin.png"  id='linkedinIcon' alt="Icone Linkedin"></img>
                     </button>
-                    <button class='home--contactButton'>
+                    <button class='home--contactButton' onclick="externalLink('https://github.com/gioCarv')">
                         <span>Github</span>
                         <img  src="imgs/github.png" id='githubIcon' alt="Icone Github"></img>
                     </button>
@@ -57,6 +57,7 @@
     <!-- Contat -->
     <script src="js/darkmode.js"></script>
     <script src="js/write.js"></script>
+    <script src="js/externalLinks.js"></script>
 
 </body>
 <style>
