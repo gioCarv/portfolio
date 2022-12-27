@@ -86,7 +86,7 @@
     background-repeat: no-repeat;
     background-size: var(--size-underlineWidth) 2px;
     background-position: left bottom;
-    animation: UnderlineOffice 5.6s normal;
+    animation: UnderlineOffice 6.7s normal;
 }
 .underlineDark{
     background-image: linear-gradient(rgb(221, 190, 11), transparent);
@@ -250,7 +250,6 @@
 #notebookImg {
     max-width: 40vw;
     animation: move infinite alternate ease-in-out 1.75s;
-
 }
 
 @keyframes move {
@@ -263,6 +262,39 @@
     to {
         transform: rotateZ(-1deg);
         margin-top: 10px;
+    }
+}
+#scrollDown{
+    position: absolute;
+    margin-left: 50vw;
+    margin-top: 90vh;
+    animation: itsVisible normal 6.3s;
+}
+#scrollDown div{
+    display: flex;
+    animation: moveArrow infinite alternate ease-in-out 0.5s;
+    flex-direction: column;
+}
+#scrollDown div::after{
+    margin-top: -10px;
+    content: 'v';
+}
+@keyframes itsVisible {
+    0%,99%{
+        opacity: 0%;
+    }
+    100%{
+
+    }
+}
+@keyframes moveArrow {
+    from{
+        opacity: 30%;
+        padding-top: 0;
+    }
+    to{
+        opacity: 50%;
+        padding-top: 5px;
     }
 }
 
@@ -291,7 +323,7 @@
 
 @media (max-width:1300px) {
     :root {
-        --size-Notebook: 0.70;
+        --size-Notebook: 0.80;
         --size-fontName: 50px;
         --size-fontOtherText: 35px;
         --size-underlineWidth: 380px;

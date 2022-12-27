@@ -1,5 +1,6 @@
 @import url("./header.css");
 @import url("./home.css");
+@import url("./whoIAm.css");
 :root{
     --color-principalLight:rgb(192, 197, 202);
     /* --color-principalDark:rgb(15, 15, 15); */
