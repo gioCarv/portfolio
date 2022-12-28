@@ -1,9 +1,4 @@
 :root {
-    --color-screen: linear-gradient(rgb(180, 178, 178), rgb(190, 185, 185));
-    --color-3dEffect: gray;
-    --color-keyboard: linear-gradient(rgb(190, 185, 185), rgb(180, 178, 178));
-    --color-keyboard-keys: linear-gradient(rgb(99, 95, 95), rgb(141, 134, 134));
-    --color-moon: gray;
     /* --color-text: rgb(255,140,0); */
     --color-text: rgb(160, 138, 12);
     /* --color-text:rgb(123,104,238); */
@@ -13,9 +8,6 @@
     --size-fontName: 65px;
     --size-fontOtherText: 39px;
     --size-Notebook: 0.75;
-    --size-moonX: 30px;
-    --size-moonY: 15px;
-    --size-moon: var(var(--size-moonX)) var(var(--size-moonY)) 0 0 var(--color-moon);
     --size-underlineWidth: 410px
 
 
@@ -172,80 +164,6 @@
 }
 
 
-.screenAux,
-.keyboard {
-    transform-style: preserve-3d;
-    position: absolute;
-    margin: auto;
-    border-radius: 5px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 600px;
-    height: 300px;
-    background-image: var(--color-screen);
-    box-shadow: 12px -5px 0px 0px gray;
-    transform: rotateY(-45deg);
-}
-
-.screenAux::after,
-.keyboard::after,
-.screen {
-    content: '';
-    transform-style: preserve-3d;
-    position: absolute;
-    margin: auto;
-    border-radius: 5px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: var(--color-keyboard);
-    transform: rotateX(65deg);
-}
-
-.screenAux::after {
-    /* keyboard */
-    width: 600px;
-    height: 250px;
-    margin-top: 110px;
-    margin-left: 135px;
-    box-shadow: 5px 14px 0px 12px var(--color-3dEffect);
-}
-
-.keyboard::after {
-    /* keyboard keys */
-    width: 420px;
-    height: 170px;
-    background-image: var(--color-keyboard-keys);
-    transform: rotateX(65deg);
-    margin-top: 150px;
-    margin-left: 280px;
-    /* box-shadow: 2px 5px 0px 2px gray; */
-
-}
-
-.screen {
-    width: 600px;
-    height: 300px;
-    background-image: var(--color-screen);
-    box-shadow: 10px -5px 0px 0px var(--color-3dEffect);
-    transform: rotateY(-45deg);
-}
-
-.screen::before {
-    content: '';
-    position: absolute;
-    margin-left: 205px;
-    margin-top: 75px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    box-shadow: var(--size-moon);
-    background-color: transparent;
-    animation: reflex infinite normal 6s;
-}
 
 #notebookImg {
     max-width: 40vw;
@@ -265,14 +183,33 @@
     }
 }
 #scrollDown{
+    font-family: 'Oxygen';
     position: absolute;
     margin-left: 50vw;
     margin-top: 90vh;
-    animation: itsVisible normal 6.3s;
+    /* animation: itsVisible normal 6.3s; */
+    text-align: center;
+    font-size: 19px;
+    font-weight: 500;
+    opacity: 0.7;
+    display:none;
+    animation: opacityPulse infinite alternate ease-in-out 0.5s;
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+}
+@keyframes opacityPulse{
+    from{
+        opacity: 70%;
+    }
+    to{
+        opacity: 55%;
+    }
 }
 #scrollDown div{
-    display: flex;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     animation: moveArrow infinite alternate ease-in-out 0.5s;
+    display: flex;
     flex-direction: column;
 }
 #scrollDown div::after{
@@ -289,37 +226,13 @@
 }
 @keyframes moveArrow {
     from{
-        opacity: 30%;
         padding-top: 0;
     }
     to{
-        opacity: 50%;
         padding-top: 5px;
     }
 }
 
-@keyframes reflex {
-    0% {
-        box-shadow: var(--size-moonX) var(--size-moonY) 0 0 rgb(53, 49, 49);
-    }
-
-    35% {
-
-        box-shadow: var(--size-moonX) var(--size-moonY) 0 0 #ff6d19;
-    }
-
-    50% {
-        box-shadow: var(--size-moonX) var(--size-moonY) 0 0 rgb(46, 12, 12);
-    }
-
-    75% {
-        box-shadow: var(--size-moonX) var(--size-moonY) 0 0 rgb(130, 35, 255);
-    }
-
-    100% {
-        box-shadow: var(--size-moonX) var(--size-moonY) 0 0 rgb(53, 49, 49);
-    }
-}
 
 @media (max-width:1300px) {
     :root {

@@ -1,0 +1,127 @@
+:root {
+    --size-imageWidth: 340px;
+    --size-imageHeigth: calc(var(--size-imageWidth) * 9 / 16);
+    /* --size-projectSizeY: 700px; */
+    --time-descriptionVisible:0.25s;
+}
+
+
+.projects{
+    width: 100vw;
+    margin-top: 100px;
+    position:relative;
+    /* box-sizing:border-box; */
+    padding: 100px 15vw;
+    font-size: 22px;
+    /* height: var(--size-projectSizeY);     */
+}
+.projectsList{
+    width: 70vw;
+    /* position: absolute; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.project, .comingSoon{
+    cursor: pointer;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    width: var(--size-imageWidth);
+    height: var(--size-imageHeigth);
+    transition: all ease var(--time-descriptionVisible);
+}
+
+.project:hover, .comingSoon:hover{
+    transition-delay: 0.1s;
+    scale: 1.05;
+}
+.infoProject{
+    color: #faf8f8af;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #141414;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: none;
+}
+.project:hover .infoProject {
+    animation-delay: 0;
+    animation: visible var(--time-descriptionVisible);
+    display: flex;
+    flex-direction: column;
+}
+@keyframes visible {
+    0%{
+        opacity:0;
+        display: none;
+    }
+    75%{
+        display: flex;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+.infoProject h3{
+    margin: 0;
+}
+.end{
+    font-size: 18px;
+    color: #46D369;
+}
+.tools{
+    font-size: 15px;
+    text-align: justify;
+    color:goldenrod
+}
+.description{
+    text-align: justify;
+    font-size: 15px;
+}
+.projectImage{
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+
+}
+.comingSoon{
+    display: flex;
+    background-color: brown;
+    opacity: 0.7;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px ;
+    font-weight: 600;
+    border: 2px solid rgb(160, 145, 145);
+    color: black;
+    border-radius: 5px;
+}
+.comingSoon:hover{
+    animation: opacityPulse infinite alternate ease-in-out 0.75s;
+}
+.comingSoon div{
+    padding-bottom: 5px;
+    transform: rotate(-15deg);
+    background-image: linear-gradient(rgb(0, 0, 0), transparent);
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background-position: center bottom;
+    /* background-color: aqua; */
+}
+
+@media (max-width:1500px) {
+    :root {
+        --size-imageWidth: 290px;
+    }
+}
+@media (max-width:1300px) {
+    :root {
+        --size-imageWidth: 30vw;
+    }
+    .projectsList{
+        grid-template-columns: 1fr 1fr;
+
+    }
+}

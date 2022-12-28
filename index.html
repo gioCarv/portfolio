@@ -11,10 +11,10 @@
 </head>
 
 <body id="body" class="bodyLight">
-    <div class="header">
-        <div id="logo"> </div>
+    <div class="header" id="header">
+        <div id="logo" onclick="home()"> </div>
         <div id="info">
-            <button onclick='(setDark(), transitionDark())' id='darkMode' class="sun">🌞</button>
+            <button onclick='(setDark(), transitionDark())' id='darkMode' class="sun" >🌞</button>
             <div id="menu">
                 <div>Início</div>
                 <div>Quem sou eu</div>
@@ -45,11 +45,9 @@
                 <div id="homeNotebook">
                     <img src="assets/imgs/notebook.png" alt="notebook" id="notebookImg">
 
-                    <!-- <div class="screenAux "></div>    
-                    <div class="keyboard"></div>    
-                    <div class="screen"></div>     -->
+
                 </div>
-                <div id="scrollDown"><div>v</div></div>
+                <div id="scrollDown" onclick="scrollDown('homeVerticalShadow', '90')"> Veja mais<div>v</div></div>
             </div>
         </div>
     </section>
@@ -76,13 +74,56 @@
             <a href="assets/others/Curriculo Giovanni Carvalho.pdf" download id="downloadCV">Download CV</a>
         </div>
 
+    </section>
+    <!-- Projetos -->
+    <section class="projects">
+        <h1> Projetos</h1>            
+        <br>
+        <div class="projectsList">
+            <div id="project1" class="project"> 
+                <div class="projectImage">Imagem</div>
+                <div class="infoProject" id="infoProject1"> 
+                    <h3>Projeto Netflix</h3>
+                    <div class="end">✔ Terminado</div>
+                    <div class="tools">Tecnologías Utilizadas: JavaScript, Html, CSS, React, NodeJS & MySQL . </div>
+                    <div class="description">Esse foi o meu primeiro projeto realizado :)<br> Utilizando React para o Front-end e NodeJS para o Back-end, desenvolvi uma réplica do site da Netflix.</div>
+                </div>
+            </div>
 
+            <div id="project2" class="project"> 
+                <div class="projectImage">Imagem</div>
+                <div class="infoProject" id="infoProject1"> 
+                    <h3>Portifólio</h3>
+                    <div class="end">✔ Terminado</div>
+                    <div class="tools">Tecnologías Utilizadas: JavaScript, Html & CSS. </div>
+                    <div class="description"> A criação de um site para hospedar todos meus projetos atuais e futuros. Foi desevolvido com muita atenção e carinho ❤ visando dar uma boa clareza e uma ótima experiência ao usuário.</div>
+                </div>
+            </div>
+
+            <div id="project3" class="comingSoon">
+                <div> Em breve ...</div>
+            </div>
+        </div>
     </section>
 
-    <!-- Contat -->
+    <!-- Conhecimentos -->
+    <section class="conhecimento">
+        <!-- Contato -->
+        <section class="contact">
+            <div></div>
+        <!-- <a href="mailto:someone@example.com">Send email</a> -->
+        </section>
+    </body>
+    <!-- <div id="background">
+        <div class="screenAux "></div>    
+        <div class="keyboard"></div>    
+        <div class="screen"></div>    
+    </div> -->
+    <!--  -->
     <script src="js/darkmode.js"></script>
     <script src="js/write.js"></script>
     <script src="js/externalLinks.js"></script>
+    <script src="js/scrollDown.js"></script>
 
 </body>
 <style>
