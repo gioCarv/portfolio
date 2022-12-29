@@ -1,0 +1,57 @@
+@import url("./header.css");
+@import url("./home.css");
+@import url("./whoIAm.css");
+@import url("./project.css");
+@import url("./contact.css");
+:root{
+    --color-principalLight:rgb(192, 197, 202);
+    /* --color-principalDark:rgb(15, 15, 15); */
+    --color-principalDark:rgb(32, 25, 25);
+    --color-textLigth:black;
+    --color-textDark:rgb(221, 190, 11);
+}
+  @keyframes darkMode {
+    0%{
+        /* color: var(--color-principalLight); */
+        background-color: var(--color-principalLight);
+        background: transparent;
+    }
+  
+    100% {
+        /* color: var(--color-principalDark); */
+        background-color: var(--color-principalDark);
+
+    }
+}
+@keyframes moon {
+    0%{
+        box-shadow: 25px 10px 0 0 gray;
+    }
+    75%{
+        background-color:rgb(201, 190, 41);
+    }
+    100%{
+        background-color:rgb(201, 190, 41);
+        box-shadow: 25px 10px 0 0 transparent;
+    }
+}
+body {
+    /* overflow-x: hidden; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+}
+.bodyLight{
+    background-color: var(--color-principalLight);
+    /* background-color: rgb(189, 191, 194); */
+    color: var(--color-textLigth);
+
+}
+.bodyDark{
+    background-color: var(--color-principalDark);
+    /* background-color: rgb(31, 30, 30); */
+    color: var(--color-textDark);
+}

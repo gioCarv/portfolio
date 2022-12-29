@@ -1,6 +1,12 @@
 .contact{
-    background-color: blue;
-    margin-bottom: 300px;
+    margin-top: 90px;
+    box-sizing: border-box;
+    padding:0px 10vw;
+    margin-bottom: 150px;
+}
+.contact h1{
+    font-size: 32px;
+
 }
 .contact a{
     margin: auto;

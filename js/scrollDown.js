@@ -9,7 +9,7 @@ const scrollAnalase = (time) =>{
     
 }
 
-scrollAnalase(100)
+scrollAnalase(7000)
 
 const scrollDown = (idElement, marginTop) =>{
     

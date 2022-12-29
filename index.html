@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles/global.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="styles/main.css" rel="stylesheet" type="text/css" media="screen" />
     <!-- <link href="styles/header.css" rel="stylesheet" type="text/css" media="screen"/> -->
     <title>|Portifólio|- Giovanni </title>
 </head>
@@ -41,11 +41,8 @@
                         <img src="assets/imgs/github.png" id='githubIcon' alt="Icone Github"></img>
                     </button>
                 </div>
-
                 <div id="homeNotebook">
                     <img src="assets/imgs/notebook.png" alt="notebook" id="notebookImg">
-
-
                 </div>
                 <div id="scrollDown" onclick="scrollDown('homeVerticalShadow', '90')"> Veja mais<div>v</div></div>
             </div>
@@ -53,63 +50,83 @@
     </section>
     <!-- Quem Sou eu -->
     <section class="whoIAm">
-        <div class="textBox">
-            <h1>Quem sou eu</h1>
-            Me formei em Licenciatura em Matemática pela Universidade de São Paulo - sendo na matemática onde encontrei
-            minha grande vocação, mesmo assim, minhas perspectivas se voltaram para a área da programação, onde aliando
-            o meu gosto por aprender, minha lógica e criatividade pude achar uma carreira que satisfizesse minha visão
-            profissional em todos os aspectos.
-            <div>
-            Sou alguém que pretende sempre levar ao meu trabalho uma visão inovadora sobre os mais variados pontos,
-            no decorrer da minha carreira acumulei diversas experiências na área da educação - essas experiências me
-            aprimoraram não só como docente, mas, também, como ser humano, desenvolvendo minha empatia, confiança e
-            relações interpessoais.
+        <h1>Quem sou eu</h1>
+            <div class="textBox">
+                <img src="assets/imgs/Giovanni.jpg" alt="Giovanni Carvalho" id="me">  </img>
+                Me formei em Licenciatura em Matemática pela Universidade de São Paulo - sendo na matemática onde encontrei
+                minha grande vocação, mesmo assim, minhas perspectivas se voltaram para a área da programação, onde aliando
+                o meu gosto por aprender, minha lógica e criatividade pude achar uma carreira que satisfizesse minha visão
+                profissional em todos os aspectos.
+                <p>
+                Sou alguém que pretende sempre levar ao meu trabalho uma visão inovadora sobre os mais variados pontos,
+                no decorrer da minha carreira acumulei diversas experiências na área da educação - essas experiências me
+                aprimoraram não só como docente, mas, também, como ser humano, desenvolvendo minha empatia, confiança e
+                relações interpessoais.
+                <p>
+                Eu me tornei apaixonado pelas tecnologias ainda criança quando fui “apresentado” ao meu primeiro videogame,
+                a partir desse momento usei continuamente da minha curiosidade para tentar aprender o máximo que pude a
+                respeito desse mundo, até que meus olhos se abriram para a programação e eu de maneira autodidata fui cada
+                vez mais atrás de aprender sobre ela e suas dependências, buscando cursos, artigos e outras formas de
+                complementar meu conhecimento na área.
+                <br>
+                <a href="assets/others/Curriculo Giovanni Carvalho.pdf" download id="downloadCV">Visualizar Curriculo</a>
             </div>
-            Eu me tornei apaixonado pelas tecnologias ainda criança quando fui “apresentado” ao meu primeiro videogame,
-            a partir desse momento usei continuamente da minha curiosidade para tentar aprender o máximo que pude a
-            respeito desse mundo, até que meus olhos se abriram para a programação e eu de maneira autodidata fui cada
-            vez mais atrás de aprender sobre ela e suas dependências, buscando cursos, artigos e outras formas de
-            complementar meu conhecimento na área.
-            <br>
-            <a href="assets/others/Curriculo Giovanni Carvalho.pdf" download id="downloadCV">Download CV</a>
-        </div>
 
     </section>
     <!-- Projetos -->
     <section class="projects">
-        <h1> Projetos</h1>            
-        <br>
-        <div class="projectsList">
-            <div id="project1" class="project"> 
-                <div class="projectImage">Imagem</div>
-                <div class="infoProject" id="infoProject1"> 
-                    <h3>Projeto Netflix</h3>
-                    <div class="end">✔ Terminado</div>
-                    <div class="tools">Tecnologías Utilizadas: JavaScript, Html, CSS, React, NodeJS & MySQL . </div>
-                    <div class="description">Esse foi o meu primeiro projeto realizado :)<br> Utilizando React para o Front-end e NodeJS para o Back-end, desenvolvi uma réplica do site da Netflix.</div>
-                </div>
-            </div>
+                <br>
+                <h1> Projetos</h1>            
+                <div class="shadowBoxBackGround">
+                    
+                    <div class="projectsList">
+                        <div class="backGroundProjects"></div>
+                        <div id="project1" class="project"> 
+                            <img class="projectImage" src="assets/imgs/Projeto_Netflix.png" ></img>
+                            <div class="infoProject" id="infoProject1"> 
+                                <h3>Projeto Netflix</h3>
+                                <div class="end">✔ Terminado</div>
+                                <div class="tools">Tecnologías Utilizadas: JavaScript, Html, CSS, React, NodeJS & MySQL . </div>
+                                <div class="description">Esse foi o meu primeiro projeto realizado :)<br> Utilizando React para o Front-end e NodeJS para o Back-end, desenvolvi uma réplica, responsiva do site da Netflix.</div>
+                            </div>
+                        </div>
+            
+                        <div id="project2" class="project"> 
+                            <img class="projectImage" src="assets/imgs/portifolio_dark.png" ></img>
+                            <div class="infoProject" id="infoProject1"> 
+                                <h3>Portifólio</h3>
+                                <div class="end">✔ Terminado</div>
+                                <div class="tools">Tecnologías Utilizadas: JavaScript, Html & CSS. </div>
+                                <div class="description"> A criação de um site para hospedar todos meus projetos atuais e futuros. Foi desevolvido com muita atenção e carinho ❤ visando dar uma boa clareza e ótima experiência ao usuário.</div>
+                            </div>
+                        </div>
+            
+                        <div id="project3" class="comingSoon">
+                            <div> Em breve ...</div>
+                        </div>
+            
+                        <div id="project3" class="comingSoon">
+                            <div> Em breve ...</div>
+                        </div>
+            
+                        <div id="project3" class="comingSoon">
+                            <div> Em breve ...</div>
+                        </div>
+            
+                        <div id="project3" class="comingSoon">
+                            <div> Em breve ...</div>
+                        </div>
 
-            <div id="project2" class="project"> 
-                <div class="projectImage">Imagem</div>
-                <div class="infoProject" id="infoProject1"> 
-                    <h3>Portifólio</h3>
-                    <div class="end">✔ Terminado</div>
-                    <div class="tools">Tecnologías Utilizadas: JavaScript, Html & CSS. </div>
-                    <div class="description"> A criação de um site para hospedar todos meus projetos atuais e futuros. Foi desevolvido com muita atenção e carinho ❤ visando dar uma boa clareza e uma ótima experiência ao usuário.</div>
                 </div>
-            </div>
-
-            <div id="project3" class="comingSoon">
-                <div> Em breve ...</div>
-            </div>
-        </div>
+                </div>
     </section>
 
     <!-- Conhecimentos -->
     <section class="conhecimento">
         <!-- Contato -->
         <section class="contact">
+            <!-- <br></br> -->
+            <h1>Contato</h1>
             <div></div>
         <!-- <a href="mailto:someone@example.com">Send email</a> -->
         </section>
