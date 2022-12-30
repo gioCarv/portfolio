@@ -1,4 +1,4 @@
-const darkMode = () =>{
+export const darkMode = () =>{
     const isDark = localStorage.getItem('darkMode')
     const body = document.getElementById('body')
     const underline = document.getElementById('office')
@@ -22,7 +22,7 @@ const darkMode = () =>{
     }
 }
 darkMode()
-const setDark = ()=>{
+export const setDark = ()=>{
     const isDark = localStorage.getItem('darkMode')
     if(isDark == 'true'){
         localStorage.setItem('darkMode', false)
@@ -32,7 +32,7 @@ const setDark = ()=>{
         darkMode()
 }
 
-const transitionDark = ()=> {
+export const transitionDark = ()=> {
     const isDark = localStorage.getItem('darkMode')
     const body = document.getElementById('body')
     if(typeof isDark ==='undefined'){

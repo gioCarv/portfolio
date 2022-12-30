@@ -56,20 +56,19 @@
     color: var(--color-name);
     border-right: 5px solid white;
     animation: blink infinite alternate ease-in-out 0.6s;
+    padding-right: 5px;
 }
 
 @keyframes blink {
 
     0%,
     45% {
-        padding-right: 5px;
-        border-right: 5px solid transparent;
+        border-right-color: transparent;
     }
 
     55%,
     100% {
-        padding-right: 5px;
-        border-right: 5px solid white;
+        border-right-color: white;
     }
 
 }

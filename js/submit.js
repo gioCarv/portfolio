@@ -1,5 +1,6 @@
+import {write} from "./write.js";
 
-const verifyAndSubmit = () =>{
+export const verifyAndSubmit = () =>{
     const form = document.getElementById("form")
     const emailInput = document.getElementById("contactEmail")
     const error = document.getElementById("inputError")
@@ -8,18 +9,19 @@ const verifyAndSubmit = () =>{
     const email = emailInput.value
     const loadingBar = document.getElementById('loadingBar')
     const successfulEmail = document.getElementById('successfulEmail')
+    const text = document.getElementById('successfulEmail').innerHTML
     console.log(emailInput)
     console.log(email)
     const validEmail = isEmail(email)
     if (validEmail){
         successfulEmail.style.display = 'flex'
         loadingBar.style.display = 'flex'
-        text.style.display = 'flex'
-        write(successfulEmail, 100) 
+        // text.style.display = 'flex'
+        write(successfulEmail, 140, 400) 
         // alert(`obrigado ${nome} por entrar em contato ! Seu email esta sendo processado e será enviado dentro de alguns instantes`)
         setTimeout(() => {
-            // form.submit();
-        }, 7200);
+            form.submit();
+        }, 6000);
     } else{
         error.innerHTML = 'Email invalido'
     }

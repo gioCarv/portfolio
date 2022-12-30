@@ -1,8 +1,8 @@
 .contact{
-    background: linear-gradient(to top, rgba(31, 30, 30, 0.507) 3%, transparent 97%);
+    /* background: linear-gradient(to top, rgba(31, 30, 30, 0.281) 3%, transparent 97%); */
 }
 #contactBoxVerticalShadow{
-    background: linear-gradient(to left rgba(31, 30, 30, 0.801) 1%, transparent 99%);
+    /* background: linear-gradient(to left ,rgba(31, 30, 30, 0.336) 1%, transparent 99%); */
     margin-top: 90px;
     box-sizing: border-box;
     padding:0px 10vw;
@@ -84,19 +84,29 @@
     margin-bottom: 55px;
 }
 #successfulEmail{
-    /* display:none;     */
-    margin-top: 200px;
+    display:none;    
+    /* display: inline-block; */
+    margin-top: 150px;
     font-size: 32px;
+    overflow: hidden;
     width:max-content;
-    height: max-content;
-    padding-right:10px;
+    line-height: 35px;
+    height: 35px;
+    /* padding-right:10px; */
     border-right: 3px solid rgb(212, 215, 218);
-    /* animation: blink 1s ease-in infinite; */
+    padding-right: 8px;
+    animation: blink infinite alternate ease-in-out 0.6s;
     color: rgb(212, 215, 218);
 }
-@keyframes identifier {
-    
+@keyframes binkSucessful{
+from{
+    border-color: transparent;
 }
+to{
+    border-color: azure;
+}
+}
+
 #loadingBar{
     display: none;
     box-shadow: 0 0 10px 3px rgba(68, 65, 65, 0.425);
@@ -117,7 +127,7 @@
 #loadingBar div{
     width: 350px;
     height: 30px;
-    background: linear-gradient(rgba(10, 10, 146, 0.74), rgba(6, 6, 90, 0.733));
+    background: linear-gradient(rgba(61, 61, 187, 0.74), rgba(10, 10, 59, 0.733));
     animation: loading 6s ease-in-out; 
 }
 
@@ -135,4 +145,40 @@
         width: 300px;
     }
     
+}
+
+.contactInfoBox{
+    margin: auto;
+    margin-top: 170px;
+    padding: 10px;
+    width:60%;
+    display: flex;
+}
+.contactInfos{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.contactImgs{
+    /* scale: 0.9; */
+    border-radius: 50%;
+    margin: auto;
+    max-width: 40px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    /* background-color:  rgba(31, 30, 30, 0.507); */
+}
+.contactImgs:hover, .contactInfos div:hover  .contactImgs{
+    background-color: goldenrod;
+
+}
+#localization{
+    border: 3px solid black;
+
+}
+.contactInfos div{
+    font-size:14px;
+    margin: auto;
+    cursor: pointer;
 }

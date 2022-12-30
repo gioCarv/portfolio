@@ -1,6 +1,6 @@
 const myName = document.getElementById('name')
 const successfulEmail = document.getElementById('successfulEmail')
-const write = (element, speed)=>{
+export const write = (element, speed, start)=>{
     const textArray = element.innerHTML.split('');
     console.log(textArray)
     element.innerHTML = ''
@@ -10,9 +10,6 @@ const write = (element, speed)=>{
                 element.innerHTML += letter
             }, i*speed);
         })      
-    }, 1100);
+    }, start);
 }
-write(myName, 180)
-// write(successfulEmail, 100) 
 
-console.log('fui chamado')

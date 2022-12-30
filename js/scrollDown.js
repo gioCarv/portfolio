@@ -1,4 +1,4 @@
-const scrollAnalase = (time) =>{
+export const scrollAnaliser = (time) =>{
     setTimeout(() => {
         const text = document.getElementById('scrollDown')
         if (window.scrollY === 0){
@@ -7,9 +7,9 @@ const scrollAnalase = (time) =>{
     }, time);
 }
 
-scrollAnalase(7000)
+scrollAnaliser(7000)
 
-const scrollDown = (idElement, marginTop) =>{
+export const scrollDown = (idElement, marginTop) =>{
     const element = document.getElementById(idElement)
     const size = element.clientHeight - marginTop
     console.log(window.scrollY)
@@ -20,7 +20,7 @@ const scrollDown = (idElement, marginTop) =>{
       });
 }
 
-const home = () =>{
+export const home = () =>{
     window.scrollTo({
         top: 0,
         left: 0,

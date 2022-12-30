@@ -3,6 +3,7 @@
 @import url("./whoIAm.css");
 @import url("./project.css");
 @import url("./contact.css");
+@import url("./footer.css");
 :root{
     --color-principalLight:rgb(192, 197, 202);
     /* --color-principalDark:rgb(15, 15, 15); */
