@@ -17,6 +17,7 @@
 }
 
 #me{
+    margin-left: 20px;
     border-radius: 3px;
     border: 2px solid;
     position: relative;
@@ -58,14 +59,14 @@
 
     }
     .textBox{
-        font-size: 18px;
+        font-size: 17px;
         width: 90vw;
     }
     .whoIAm{
         padding:0 5vw;     
     }
     #me{
-
+        margin-left: 3vw;
         left: -3vw;
     }
 }
