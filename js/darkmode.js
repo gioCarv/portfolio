@@ -1,3 +1,14 @@
+const changeBackgroundElements = (className, color) =>{
+    const elements = document.getElementsByClassName(`${className}`)
+    const elementsArray = Array.from(elements)
+    // const element = document.getElementsByClassName('localization')
+    elementsArray.forEach((element,i)=>{
+        setTimeout(() => {
+            element.style.backgroundColor = `${color}`
+        }, (i*400 + 600));
+    })      
+    console.log('fui')
+}
 export const darkMode = () =>{
     const isDark = localStorage.getItem('darkMode')
     const body = document.getElementById('body')
@@ -6,6 +17,7 @@ export const darkMode = () =>{
     const verticalShadow = document.getElementById('homeVerticalShadow')
     body.style.animation = ""
     if(isDark == 'true'){
+        changeBackgroundElements('contactImgs', 'rgba(233, 167, 0, 0.63)')
         // body.style.animation = "darkMode 1s linear"
         // verticalShadow.style.background = 'rgb(31, 30, 30)'
         verticalShadow.style.background = 'transparent'
@@ -14,8 +26,9 @@ export const darkMode = () =>{
         sunOrMoon.textContent = '🌙'
         
     }else{
+        changeBackgroundElements('contactImgs', 'transparent')
         // body.style.animation = "darkMode 1s linear reverse"
-        verticalShadow.style.background = 'linear-gradient(to top, rgb(192, 197, 202) 5%, transparent 90%)'
+        verticalShadow.style.background = 'linear-gradient(to top, rgb(245, 245, 245) 10%, transparent 90%)'
         body.className = 'bodyLight'
         underline.className = 'underlineLight'
         sunOrMoon.textContent = '🌞'
@@ -48,3 +61,5 @@ export const transitionDark = ()=> {
         body.style.animation = ''
     }, 750 );
 }
+
+

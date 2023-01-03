@@ -23,6 +23,7 @@ export const verifyAndSubmit = () =>{
             form.submit();
         }, 6000);
     } else{
+        emailInput.select()
         error.innerHTML = 'Email invalido'
     }
 }

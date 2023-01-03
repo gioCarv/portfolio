@@ -21,14 +21,18 @@
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to right, rgb(31, 30, 30) 1%, transparent 95%);
+    /* background: linear-gradient(to bottom, rgb(0, 80, 160) 5%, transparent 90%); */
+    /* background: linear-gradient(to bottom, rgb(8, 51, 131) 5%, transparent 90%); */
+    /* background: linear-gradient(to bottom, rgb(63, 5, 129) 5%, transparent 90%); */
+    /* background: linear-gradient(to bottom, rgb(221, 190, 15) 5%, transparent 90%); */
 
 }
 
 #homeVerticalShadow {
+    /* APAGAR ISSO */
     display: grid;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to top, rgb(192, 197, 202) 5%, transparent 90%);
     grid-template-columns: 1fr 1fr;
 
 }
@@ -43,11 +47,6 @@
 
 }
 
-#homeText:nth-child(1) {
-    /* color: var(--color-text); */
-
-
-}
 
 #name {
     line-height: 90px;
@@ -97,6 +96,8 @@
 }
 
 .home--contactButton {
+    text-decoration: none;
+    display: inline-block;
     position: relative;
     margin-top: 30px;
     margin-left: 30px;
@@ -184,7 +185,7 @@
 #scrollDown{
     font-family: 'Oxygen';
     position: absolute;
-    margin-left: 50vw;
+    margin-left: 50%;
     margin-top: 90vh;
     /* animation: itsVisible normal 6.3s; */
     text-align: center;
@@ -244,9 +245,9 @@
         grid-template-columns: 3fr 2fr;
     }
 
-    .Home--header--genre {
+    /* .Home--header--genre {
         display: none;
-    }
+    } */
 }
 
 @media (max-width: 1000px) {
@@ -264,33 +265,31 @@
 
 @media (max-width: 900px) {
     :root {
-        --size-Notebook: 0.70;
-        --size-fontName: 40px;
+        --size-fontName: 38px;
         --size-fontOtherText: 30px;
+        --color-name:rgb(0, 0, 0);
         --size-underlineWidth: 0px;
     }
 
     #name {
-        padding-left: 35px;
+
+        padding-left: 30px;
     }
     #homeVerticalShadow {
-        display:unset;
-        /* display: flex; */
+        /* display:unset; */
+        display: flex;
         text-align: center;
         justify-content: center;
     }
-    #homeText{
-        display: grid;
-        padding-top: 90px;
-        margin-left: 0px;
-        /* margin-top: 90px; */
-        grid-template: 100px
-        / 100px
-        / 100px
-        / 1fr 1fr ;
-    }
+
     #homeNotebook {
         display: none;
          
+    }
+    #homeText{
+        margin: auto;
+    }
+    #scrollDown{
+        margin-left: 0;
     }
 }

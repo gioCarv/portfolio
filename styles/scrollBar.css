@@ -1,0 +1,35 @@
+.bodyDark::-webkit-scrollbar, .bodyLight::-webkit-scrollbar  {
+    transition: all ease 0.3s;
+    width: 17px;             
+}
+.bodyDark::-webkit-scrollbar-track {
+    background: rgb(14, 10, 3);        
+}
+.bodyDark::-webkit-scrollbar-track:hover {
+        background: rgb(26, 17, 6);        
+}
+.bodyDark::-webkit-scrollbar-thumb {    
+    background-color: rgb(29, 21, 0);    
+    border-radius: 20px;      
+    border: 2px solid rgb(109, 74, 9);  
+}
+.bodyDark::-webkit-scrollbar-thumb:hover {
+    border-color: rgb(150, 103, 18);
+}
+
+
+.bodyLight::-webkit-scrollbar-track {
+    background: rgb(134, 131, 128);        
+}
+.bodyLight::-webkit-scrollbar-track:hover {
+        background: rgb(155, 155, 161);        
+}
+.bodyLight::-webkit-scrollbar-thumb {
+    background: rgb(97, 97, 97);         
+    border-radius: 15px;       
+    border: 2px solid rgb(0, 0, 0); 
+}
+.bodyLight::-webkit-scrollbar-thumb:hover {
+    border-color: rgb(48, 48, 49);
+}
+

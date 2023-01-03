@@ -12,18 +12,18 @@
 
 <body id="body" class="bodyLight">
     <div class="header" id="header">
-        <div id="logo" onclick="home()"> </div>
+        <div id="logo" onclick="scrollDown('home')"> </div>
         <div id="info">
             <button onclick='(setDark(), transitionDark())' id='darkMode' class="sun">🌞</button>
             <div id="menu">
-                <div>Início</div>
-                <div>Quem sou eu</div>
-                <div>Projetos</div>
-                <div>Contato</div>
+                <div onclick="scrollDown('home')">Início</div>
+                <div onclick="scrollDown('whoIAm')">Quem sou eu</div>
+                <div onclick="scrollDown('allProjects')">Projetos</div>
+                <div onclick="scrollDown('contact')">Contato</div>
             </div>
         </div>
     </div>
-    <!-- HOME -->
+    <!-- Inicio -->
     <section id="home">
         <div id="homeContainer">
             <div id="homeVerticalShadow">
@@ -31,15 +31,14 @@
                     <div>Olá, me chamo</div>
                     <span id="name">Giovanni Carvalho.</span>
                     <div id="office">Desenvolvedor Full Stack</div>
-                    <button class='home--contactButton'
-                        onclick="externalLink('https://www.linkedin.com/in/giovanni-carvalho-871812111/')">
+                    <a class='home--contactButton' href ="https://www.linkedin.com/in/giovanni-carvalho-871812111/"  target="_blank">
                         <span>Linked</span>
                         <img src="assets/imgs/linkedin.png" id='linkedinIcon' alt="Icone Linkedin"></img>
-                    </button>
-                    <button class='home--contactButton' onclick="externalLink('https://github.com/gioCarv')">
+                    </a>
+                    <a class='home--contactButton' href ="https://github.com/gioCarv" target="_blank">
                         <span>Github</span>
                         <img src="assets/imgs/github.png" id='githubIcon' alt="Icone Github"></img>
-                    </button>
+                    </a>
                 </div>
                 <div id="homeNotebook">
                     <img src="assets/imgs/notebook.png" alt="notebook" id="notebookImg">
@@ -50,7 +49,7 @@
         </div>
     </section>
     <!-- Quem Sou eu -->
-    <section class="whoIAm">
+    <section class="whoIAm" id="whoIAm">
         <h1>Quem sou eu</h1>
         <div class="textBox">
             <img src="assets/imgs/Giovanni.jpg" alt="Giovanni Carvalho" id="me"> </img>
@@ -78,7 +77,7 @@
 
     </section>
     <!-- Projetos -->
-    <section class="projects">
+    <section class="projects" id="allProjects">
         <br>
         <h1> Projetos</h1>
         <div class="shadowBoxBackGround">
@@ -103,8 +102,10 @@
                         <h3>Portifólio</h3>
                         <div class="end">✔ Terminado</div>
                         <div class="tools">Tecnologías Utilizadas: JavaScript, Html & CSS. </div>
-                        <div class="description">A criação de um site para hospedar todos meus projetos atuais e
-                            futuros. Foi desevolvido com muita dedicação e carinho ❤ visando dar uma boa clareza e ótima
+                        <div class="description">Esse portifolio foi criado com intuito de hospedar todos meus projetos
+                            atuais e
+                            futuros, ele foi desevolvido com muita dedicação, esforço e carinho ❤ visando dar uma boa
+                            clareza e ótima
                             experiência ao usuário.</div>
                     </div>
                 </div>
@@ -113,15 +114,15 @@
                     <div> Em breve ...</div>
                 </div>
 
-                <div id="project3" class="comingSoon">
+                <div id="project4" class="comingSoon">
                     <div> Em breve ...</div>
                 </div>
 
-                <div id="project3" class="comingSoon">
+                <div id="project5" class="comingSoon">
                     <div> Em breve ...</div>
                 </div>
 
-                <div id="project3" class="comingSoon">
+                <div id="project6" class="comingSoon">
                     <div> Em breve ...</div>
                 </div>
 
@@ -129,14 +130,12 @@
         </div>
     </section>
 
-    <!-- Conhecimentos -->
-    <!-- <section class="conhecimento"> -->
     <!-- Contato -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <!-- <br></br> -->
         <div id="contactBoxVerticalShadow">
-        <h1>Contato</h1>
-        <div class="contactBox">
+            <h1>Contato</h1>
+            <div class="contactBox">
                 <form class="emailInfos" action="https://formsubmit.co/giocarvalho.dev@gmail.com" method="POST"
                     id="form">
                     <h3>Entre em Contato</h3>
@@ -159,34 +158,47 @@
                 </form>
                 <div id="contactAnimation">
                     <div>Quer entrar em Contato? </div>
-                    <div>preencha os campos ao lado :)</div>
+                    <div>Preencha os campos ao lado :)</div>
                     <div id="successfulEmail">Obrigado por entrar em contato!</div>
-                    <!-- obrigado por entrar em contato ! Seu email será enviado dentro de alguns instantes -->
-                    <!-- obrigado por entrar em contato ! Seu email esta sendo processado e será enviado dentro de alguns instantes. -->
                     <div id="loadingBar">
                         <div></div>
                     </div>
                 </div>
             </div>
-            <div class="contactInfoBox">    
-                <div class="contactInfos">
+            <div class="contactInfoBox">
+                <div class="contactInfos" id="contactInfosPhone" onclick="copy(event, 0)">
+                    <div class="copyText" >texto copiado</div>
                     <img class="contactImgs" src="./assets/imgs/phone.png">
-                    <div>(11) 9494-25215</div>
-                </div>            
-                <div class="contactInfos">
-                    <img class="contactImgs" src="./assets/imgs/email.png">
-                    <div>giocarvalho.dev@gmail.com</div>
-                </div>            
-                <div class="contactInfos" >
+                    <div>(11) 94942-5215</div>
+                </div>
+                <a class="contactInfos" id="contactInfosLinkedin" href ="https://www.linkedin.com/in/giovanni-carvalho-871812111/"  target="_blank">
+                    <img class="contactImgs" src="assets/imgs/linkedinIcon.png" id="likedinIconContact" alt="Linkedin Icon">
+                    <div>Linkedin </div>
+            </a>
+                <a class="contactInfos" id="contactInfosGithub"  href ="https://github.com/gioCarv"  target="_blank">
+                    <img class="contactImgs" src="assets/imgs/github.png" alt="Github Icon" id="githubIconContact">
+                    <div>Github </div>
+                </a>
+                <div class="contactInfos" id="contactInfosLocation" onclick="copy(event, 1)">
+                    <div class="copyText" >texto copiado</div>
                     <img class="contactImgs" src="./assets/imgs/localização.png" id="localization">
                     <div>Jardim das Oliveira<br> São Paulo, SP</div>
-                </div>            
+                </div>
+                <div class="contactInfos" id="contactInfosEmail" onclick="copy(event, 2)">
+                    <div class="copyText" >texto copiado</div>
+                    <img class="contactImgs" src="./assets/imgs/email.png">
+                    <div>giocarvalho.dev@gmail.com</div>
+                </div>
             </div>
         </div>
-        <!-- <a href="mailto:someone@example.com">Send email</a> -->
+        <!-- <div id="background">
+            <div class="screenAux"></div>
+            <div class="keyboard"></div>
+            <div class="screen"></div> 
+        </div> -->
     </section>
-    <section id="footer">
 
+    <section id="footer">
     </section>
 </body>
 <!-- <div id="background">

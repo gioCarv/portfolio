@@ -11,13 +11,14 @@ scrollAnaliser(7000)
 
 export const scrollDown = (idElement, marginTop) =>{
     const element = document.getElementById(idElement)
+    console.log(element.getBoundingClientRect())
     const size = element.clientHeight - marginTop
+    console.log(size)
     console.log(window.scrollY)
-    window.scrollTo({
-        top: size,
-        left: 0,
-        behavior: 'smooth'
-      });
+
+        console.log(element)
+        element.scrollIntoView({block: "start", behavior: "smooth"});
+
 }
 
 export const home = () =>{
