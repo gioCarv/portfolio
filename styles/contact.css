@@ -1,5 +1,6 @@
 .contact{
     /* background: linear-gradient(to top, rgba(31, 30, 30, 0.281) 3%, transparent 97%); */
+    position: relative;
 }
 #contactBoxVerticalShadow{
     /* background: linear-gradient(to left ,rgba(31, 30, 30, 0.336) 1%, transparent 99%); */
@@ -8,7 +9,7 @@
 }
 .contact h1{
     margin-bottom: 60px;
-    font-size: 32px;
+    font-size: 30px;
 
 }
 /* .contact a{
@@ -20,46 +21,66 @@
     grid-template-columns: 1fr 1fr;
 }
 .emailInfos{
-    background-color: rgba(0, 0, 0, 0.123);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.897);
     display: flex;
     flex-direction: column;
     margin: auto;
     box-sizing: border-box;
-    padding: 50px 70px;
+    padding: 25px 60px;
     border-radius: 5px;
 }
 .emailInfos h3{
     margin: auto;
     margin-bottom: 15px;
-
 }
 .inputInfos{
-    border-radius: 5px;
+    border: none;
+    /* box-shadow: 0 2px 1px 0px; */
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.719);
+    background-color: transparent;
     padding: 10px 5px;
     margin: auto;
     margin-top: 5px;
     margin-bottom: 5px;
     width: 320px;
     align-items: center;
+    color: rgb(14, 139, 139);
+}
+.inputInfos:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+/* Cor de fundo do autocomplete */
+.inputInfos:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px rgba(0, 0, 0, 0.897) inset;    
+    -webkit-text-fill-color:rgb(14, 139, 139);
 }
 
+/* Cor do texto do autocomplete */
 
 #textContactSubject{
     margin-top: 45px;
 }
 #contactText{
+    border-top: 1.5px solid rgba(255, 255, 255, 0.719);
     text-align: justify;
-    padding: 10px 5px 140px 5px;
+    padding: 5px 5px 75px 5px;
     resize: vertical;
 }
 /* #contactText::-webkit-scrollbar{
     background-color: rgb(163, 41, 41);
 } */
 #contactButton{
+    cursor: pointer;
     border-radius: 5px;
     padding: 10px 20px;
     margin: auto;
     margin-top: 15px;
+    transition: all ease 0.2s
+}
+#contactButton:hover{
+    scale: 1.05;
 }
 #inputError{
     float: right;
@@ -73,27 +94,25 @@
     /* justify-content: space-between; */
     font-family: 'Quando', serif;
     margin: auto;
-    margin-top: 80px;
+    margin-top: 60px;
     font-size: 40px;
     position: relative;
 }
 #contactAnimation >div{
-    margin-bottom: 55px;
+    margin-bottom: 35px;
 }
 #successfulEmail{
     display:none;    
-    /* display: inline-block; */
     margin-top: 150px;
     font-size: 32px;
     overflow: hidden;
     width:max-content;
     line-height: 35px;
     height: 35px;
-    /* padding-right:10px; */
-    border-right: 3px solid rgb(212, 215, 218);
+    border-right: 3px solid;
     padding-right: 8px;
     animation: blink infinite alternate ease-in-out 0.6s;
-    color: rgba(61, 61, 187, 0.74);
+    color: rgb(107, 107, 107);
 }
 @keyframes binkSucessful{
 from{
@@ -103,15 +122,22 @@ to{
     border-color: azure;
 }
 }
-
-#loadingBar{
+#loadingBarCel{
+    z-index: 8;
+    top: 50%;
+    right: 50% ;
+    position: fixed;
+    justify-content: center;
+    scale: 1.5;
     display: none;
-    box-shadow: 0 0 10px 3px rgba(68, 65, 65, 0.425);
-    width: 350px;
-    height: 30px;
-    border: 3px solid rgb(6, 6, 90);
-    border-radius: 5px;
+}
+.loadingBar {
+    left: 40%;
     animation: setVisible 1s ease-in;
+    width: 48px;
+    height: 48px;
+    position: relative;
+    display: none;
 }
 @keyframes setVisible{
     from{
@@ -121,28 +147,32 @@ to{
         opacity: 1;
     }
 }
-#loadingBar div{
-    width: 350px;
-    height: 30px;
-    background: linear-gradient(rgba(61, 61, 187, 0.74), rgba(10, 10, 59, 0.733));
-    animation: loading 6s ease-in-out; 
-}
+.loadingBar::after,
+.loadingBar::before {
+    content: '';  
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border: 2px solid rgb(221, 190, 11);
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: rotation 2s ease-in-out infinite alternate;
+  }
+.loadingBar::after {
+    border-color: black;
+    animation-direction: alternate-reverse;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
 
-@keyframes loading {
-    0%,25%{
-        width: 0;
-    }
-    40%,55%{
-        width: 80px;
-    }
-    80%,90%{
-        width: 200px;
-    }
-    100%{
-        width: 300px;
-    }
-    
-}
 
 .contactInfoBox{
     margin: auto;
@@ -192,16 +222,20 @@ to{
     cursor: pointer;
 }
 .copyText{
+    color:rgb(221, 190, 11);
     margin: auto;
     display: none;
     border-radius: 10px;
     width: max-content;
     padding: 15px;
     top: -60px;
-    left: calc(50% - 55px) ;
+    left: calc(50% - 65px) ;
     position: absolute;
     background-color: rgba(35, 37, 37, 0.753);
     animation: temporaryVisible 5s;
+}
+#contactInfosEmail{
+    padding-top: 20px;
 }
 @keyframes temporaryVisible {
     0%{
@@ -239,9 +273,6 @@ to{
     #successfulEmail{
         font-size: 25px;
     }
-    #loadingBar{
-        width: 330px;
-    }
     .contactInfoBox{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -253,9 +284,22 @@ to{
     #contactInfosEmail, #contactInfosLocation{
         grid-column: span 3;
     }
-
+    
 }
 @media (max-width: 900px){ 
+    .contact h1{
+        text-align: center;
+    }
+    #contactInfosEmail div{
+        /* word-wrap: break-word; */
+        /* max-width: 40vw; */
+    }
+    #loadingBarCel{
+        display: inherit;
+    }
+    /* #contactInfosEmail::after{
+        content: 'giovcarvalho@'
+    } */
     /* .contactBox{
         display: grid;
         grid-template-columns: 1fr 1fr;

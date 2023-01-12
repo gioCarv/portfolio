@@ -7,17 +7,23 @@
     --size-moonX: 30px;
     --size-moonY: 15px;
     --size-moon: var(var(--size-moonX)) var(var(--size-moonY)) 0 0 var(--color-moon);
-    --size-background: 1.5
+    --size-background: 1.4
 }
 
 
 #background {
-    margin-top: auto;
-    margin-top: 550px;
+    /* top: 50%;
+    left: 50%; */
+    /* margin: auto; */
+    /* transform: scale(var(--size-background)) translate(-50%, -50%) ; */
+    scale: (var(--size-background));
     font-size: 25px;
     display: flex;
-    transform: scale(var(--size-background));
+    align-items: center;
+    justify-content: center;
     opacity: 0.2;
+    /* position: absolute; */
+
 }
 
 .screenAux,

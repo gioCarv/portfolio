@@ -33,6 +33,7 @@
     opacity: 1;
 }
 
+
 #downloadCV{
     display: inline-block;
     margin-top: 30px;
@@ -52,20 +53,49 @@
     transition: all ease 0.5s;
     background-color: rgba(77, 72, 72, 0.45);
 }
+#buttonBox{
+    display: none;
+    margin-top: 15px;
+    text-align: center;
+}
+#showMore{
+    text-decoration: underline;
+    background: none;
+    border: none;
+    text-align: center;    
+    cursor: pointer;
+    color: inherit;
+}
 
 @media (max-width: 900px) {
-    :root {
-
-    }
-    .textBox{
-        font-size: 17px;
-        width: 90vw;
+    .whoIAm h1{
+        text-align: center;
     }
     .whoIAm{
-        padding:0 5vw;     
+        padding:12vw 5vw;     
     }
     #me{
         margin-left: 3vw;
         left: -3vw;
+    }
+}
+@media (max-width: 700px) {
+    #buttonBox{
+    display: inherit;
+    }
+    .textBox{
+        display:-webkit-box;
+        -webkit-line-clamp: 16; 
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 17px;
+        width: 90vw;
+        justify-content: center;
+    }
+}
+@media (max-width: 400px) {
+    .textBox{
+        -webkit-line-clamp: 26; 
     }
 }

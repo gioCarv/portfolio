@@ -1,5 +1,5 @@
 import {write} from "./write.js";
-
+let cooldown = false
 export const verifyAndSubmit = () =>{
     const form = document.getElementById("form")
     const emailInput = document.getElementById("contactEmail")
@@ -7,7 +7,7 @@ export const verifyAndSubmit = () =>{
     const nomeInput = document.getElementById("contactName")
     const nome = nomeInput.value
     const email = emailInput.value
-    const loadingBar = document.getElementById('loadingBar')
+    const loadingBars = document.getElementsByClassName('loadingBar')
     const successfulEmail = document.getElementById('successfulEmail')
     const text = document.getElementById('successfulEmail').innerHTML
     console.log(emailInput)
@@ -15,13 +15,20 @@ export const verifyAndSubmit = () =>{
     const validEmail = isEmail(email)
     if (validEmail){
         successfulEmail.style.display = 'flex'
-        loadingBar.style.display = 'flex'
-        // text.style.display = 'flex'
-        write(successfulEmail, 140, 400) 
-        // alert(`obrigado ${nome} por entrar em contato ! Seu email esta sendo processado e será enviado dentro de alguns instantes`)
-        setTimeout(() => {
-            form.submit();
-        }, 6000);
+        loadingBars[1].style.display = 'flex'
+        if(window.innerWidth < 900){
+            loadingBars[0].style.display = 'flex'
+        }
+        if(!cooldown){
+            cooldown = true
+            write(successfulEmail, 140, 400) 
+            setTimeout(() => {
+                form.submit();
+                cooldown = false
+            }, 6000);
+        }else{
+            console.log('no cd')
+        }
     } else{
         emailInput.select()
         error.innerHTML = 'Email invalido'

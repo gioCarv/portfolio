@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/imgs/icon.png" type="image/x-icon">
     <link href="styles/main.css" rel="stylesheet" type="text/css" media="screen" />
     <!-- <link href="styles/header.css" rel="stylesheet" type="text/css" media="screen"/> -->
-    <title>|Portifólio|- Giovanni </title>
+    <title>Portifólio - Giovanni </title>
 </head>
 
 <body id="body" class="bodyLight">
@@ -15,6 +16,7 @@
         <div id="logo" onclick="scrollDown('home')"> </div>
         <div id="info">
             <button onclick='(setDark(), transitionDark())' id='darkMode' class="sun">🌞</button>
+            <img src="./assets/imgs/menu.png" alt="Botão do menu" id="buttonMenu">
             <div id="menu">
                 <div onclick="scrollDown('home')">Início</div>
                 <div onclick="scrollDown('whoIAm')">Quem sou eu</div>
@@ -31,19 +33,20 @@
                     <div>Olá, me chamo</div>
                     <span id="name">Giovanni Carvalho.</span>
                     <div id="office">Desenvolvedor Full Stack</div>
-                    <a class='home--contactButton' href ="https://www.linkedin.com/in/giovanni-carvalho-871812111/"  target="_blank">
+                    <a class='home--contactButton' href="https://www.linkedin.com/in/giovanni-carvalho-871812111/"
+                        target="_blank">
                         <span>Linked</span>
-                        <img src="assets/imgs/linkedin.png" id='linkedinIcon' alt="Icone Linkedin"></img>
+                        <img src="assets/imgs/linkedin.png" id='linkedinIcon' alt="Icone Linkedin">
                     </a>
-                    <a class='home--contactButton' href ="https://github.com/gioCarv" target="_blank">
+                    <a class='home--contactButton' href="https://github.com/gioCarv" target="_blank">
                         <span>Github</span>
-                        <img src="assets/imgs/github.png" id='githubIcon' alt="Icone Github"></img>
+                        <img src="assets/imgs/github.png" id='githubIcon' alt="Icone Github">
                     </a>
                 </div>
                 <div id="homeNotebook">
                     <img src="assets/imgs/notebook.png" alt="notebook" id="notebookImg">
                 </div>
-                <div id="scrollDown" onclick="scrollDown('homeVerticalShadow', '90')"> Veja mais<div>v</div>
+                <div id="scrollDown" onclick="scrollDown('whoIAm')"> Veja mais<div>v</div>
                 </div>
             </div>
         </div>
@@ -52,7 +55,7 @@
     <section class="whoIAm" id="whoIAm">
         <h1>Quem sou eu</h1>
         <div class="textBox">
-            <img src="assets/imgs/Giovanni.jpg" alt="Giovanni Carvalho" id="me"> </img>
+            <img src="assets/imgs/Giovanni.jpg" alt="Giovanni Carvalho" id="me">
             Me formei em Licenciatura em Matemática pela Universidade de São Paulo - sendo na matemática onde encontrei
             minha grande vocação, mesmo assim, minhas perspectivas se voltaram para a área da programação, onde aliando
             o meu gosto por aprender, minha lógica e criatividade pude achar uma carreira que satisfizesse minha visão
@@ -71,9 +74,12 @@
                 vez mais atrás de aprender sobre ela e suas dependências, buscando cursos, artigos e outras formas de
                 complementar meu conhecimento na área.
                 <br>
-                <a href="assets/others/Curriculo Giovanni Carvalho.pdf" download id="downloadCV">Visualizar
-                    Curriculo</a>
-        </div>
+            </div>
+            <div id="buttonBox"> 
+                <button id="showMore">Mostrar mais</button>
+            </div>
+            <a href="assets/others/Curriculo Giovanni Carvalho.pdf" download id="downloadCV">Baixar
+                Curriculo</a>
 
     </section>
     <!-- Projetos -->
@@ -85,9 +91,16 @@
             <div class="projectsList">
                 <div class="backGroundProjects"></div>
                 <div id="project1" class="project">
-                    <img class="projectImage" src="assets/imgs/Projeto_Netflix.png"></img>
+                    <video class="projectVideo" autoplay muted loop id="projectVideo1"  data-second="0">
+                        <source src="assets/imgs/portifolio@/video.webm" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <img class="projectImage" src="assets/imgs/Projeto_Netflix2.png">
                     <div class="infoProject" id="infoProject1">
                         <h3>Projeto Netflix</h3>
+                        <a class="githubProject" id="githubProjectNetflix" target="_blank">
+                            <img src="assets/imgs/github.png" alt="Icone Github">
+                        </a>
                         <div class="end">✔ Terminado</div>
                         <div class="tools">Tecnologías Utilizadas: JavaScript, Html, CSS, React, NodeJS & MySQL . </div>
                         <div class="description">Esse foi o meu primeiro projeto realizado :)<br> Utilizando React para
@@ -95,44 +108,94 @@
                         </div>
                     </div>
                 </div>
+                <div class="moreInfos" id="moreInfos@1">
+                    <img class="moreInfosIcon" src="./assets/imgs/more@1.png" alt="Veja mais">
+                </div>
 
+                <!-- <div id="project2" class="project" onmouseenter="animationPics(event)" onmouseleave="console.log(event.target)"> -->
                 <div id="project2" class="project">
-                    <img class="projectImage" src="assets/imgs/portifolio_dark.png"></img>
-                    <div class="infoProject" id="infoProject1">
+                    <video class="projectVideo" autoplay muted loop id="projectVideo2">
+                        <source src="assets/imgs/portifolio@/video.webm" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <!-- <img class="projectImageAnimation" src="assets/imgs/portifolio@/image5.png" alt='Imagem do portifolio'> -->
+                    <!-- <img class="projectImageAnimation" src="assets/imgs/portifolio@/image4.png" alt='Imagem do portifolio'>
+                    <img class="projectImageAnimation" src="assets/imgs/portifolio@/image3.png" alt='Imagem do portifolio'>
+                    <img class="projectImageAnimation" src="assets/imgs/portifolio@/image2.png" alt='Imagem do portifolio'> -->
+                    <img class="projectImage" id='project2Image' src="assets/imgs/portifolio@/image1.png"
+                        alt='Imagem do portifolio'>
+                    <div class="infoProject" id="infoProject2">
                         <h3>Portifólio</h3>
+                        <a class="githubProject" href="https://github.com/gioCarv/portifolio" target="_blank">
+                            <img src="assets/imgs/github.png" alt="Icone Github"></a>
+                        <!-- <div class="openGithub">Abrir no github ➡</div> -->
                         <div class="end">✔ Terminado</div>
                         <div class="tools">Tecnologías Utilizadas: JavaScript, Html & CSS. </div>
                         <div class="description">Esse portifolio foi criado com intuito de hospedar todos meus projetos
                             atuais e
                             futuros, ele foi desevolvido com muita dedicação, esforço e carinho ❤ visando dar uma boa
                             clareza e ótima
-                            experiência ao usuário.</div>
+                            experiência ao usuário.
+                        </div>
                     </div>
+                </div>
+                <div class="moreInfos" id="moreInfos@2">
+                    <img class="moreInfosIcon" src="./assets/imgs/more@1.png" alt="Veja mais">
                 </div>
 
                 <div id="project3" class="comingSoon">
-                    <div> Em breve ...</div>
+                    <span class="P_1">E</span>
+                    <span class="P_2">M</span>
+                    <span class="P_3">B</span>
+                    <span class="P_4">R</span>
+                    <span class="P_5">E</span>
+                    <span class="P_6">V</span>
+                    <span class="P_7">E</span>
+                    <span class="P_8"></span>
                 </div>
-
                 <div id="project4" class="comingSoon">
-                    <div> Em breve ...</div>
+                    <span class="P_1">E</span>
+                    <span class="P_2">M</span>
+                    <span class="P_3">B</span>
+                    <span class="P_4">R</span>
+                    <span class="P_5">E</span>
+                    <span class="P_6">V</span>
+                    <span class="P_7">E</span>
+                    <span class="P_8"></span>
                 </div>
-
                 <div id="project5" class="comingSoon">
-                    <div> Em breve ...</div>
+                    <span class="P_1">E</span>
+                    <span class="P_2">M</span>
+                    <span class="P_3">B</span>
+                    <span class="P_4">R</span>
+                    <span class="P_5">E</span>
+                    <span class="P_6">V</span>
+                    <span class="P_7">E</span>
+                    <span class="P_8"></span>
                 </div>
-
                 <div id="project6" class="comingSoon">
-                    <div> Em breve ...</div>
+                    <span class="P_1">E</span>
+                    <span class="P_2">M</span>
+                    <span class="P_3">B</span>
+                    <span class="P_4">R</span>
+                    <span class="P_5">E</span>
+                    <span class="P_6">V</span>
+                    <span class="P_7">E</span>
+                    <span class="P_8"></span>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Contato -->
     <section class="contact" id="contact">
+
         <!-- <br></br> -->
+        <!-- <div id="background">
+            <div class="screenAux"></div>
+            <div class="keyboard"></div>
+            <div class="screen"></div>
+        </div> -->
         <div id="contactBoxVerticalShadow">
             <h1>Contato</h1>
             <div class="contactBox">
@@ -147,47 +210,52 @@
                     <span> Email
                         <span id="inputError"></span>
                     </span>
-                    <input type="text" placeholder="Digite seu Email" name="email" class="inputInfos" id="contactEmail"
-                        onblur="" required>
+                    <input type="text" placeholder="(*) Digite seu Email" name="email" class="inputInfos"
+                        id="contactEmail" onblur="" required>
+                        <span id="loadingBarCel">
+                            <span class="loadingBar"></span>
+                        </span>
                     <span id="textContactSubject"> Assunto </span>
-                    <input type="text" placeholder="Assunto" name="subject" class="inputInfos" id="contactSubject">
+                    <input type="text" placeholder="Assunto" name="subject" class="inputInfos" id="contactSubject"
+                    autocomplete="off">
+                    <br>
                     <span> Digite sua mensagem </span>
-                    <textarea placeholder="Texto" class="inputInfos" name="message" id="contactText" wrap="hard"
-                        required></textarea>
+                    <textarea placeholder="(*) Texto" class="inputInfos" name="message" id="contactText" wrap="hard"
+                        autocomplete="off" required></textarea>
                     <button id="contactButton" onclick="verifyAndSubmit()">Enviar Email</button>
                 </form>
                 <div id="contactAnimation">
-                    <div>Quer entrar em Contato? </div>
+                    <div>Quer entrar em contato? </div>
                     <div>Preencha os campos ao lado :)</div>
                     <div id="successfulEmail">Obrigado por entrar em contato!</div>
-                    <div id="loadingBar">
-                        <div></div>
-                    </div>
+                    <span class="loadingBar"></span>
                 </div>
             </div>
             <div class="contactInfoBox">
                 <div class="contactInfos" id="contactInfosPhone" onclick="copy(event, 0)">
-                    <div class="copyText" >texto copiado</div>
+                    <div class="copyText">TEXTO COPIADO</div>
                     <img class="contactImgs" src="./assets/imgs/phone.png">
                     <div>(11) 94942-5215</div>
                 </div>
-                <a class="contactInfos" id="contactInfosLinkedin" href ="https://www.linkedin.com/in/giovanni-carvalho-871812111/"  target="_blank">
-                    <img class="contactImgs" src="assets/imgs/linkedinIcon.png" id="likedinIconContact" alt="Linkedin Icon">
+                <a class="contactInfos" id="contactInfosLinkedin"
+                    href="https://www.linkedin.com/in/giovanni-carvalho-871812111/" target="_blank">
+                    <img class="contactImgs" src="assets/imgs/linkedinIcon.png" id="likedinIconContact"
+                        alt="Linkedin Icon">
                     <div>Linkedin </div>
-            </a>
-                <a class="contactInfos" id="contactInfosGithub"  href ="https://github.com/gioCarv"  target="_blank">
+                </a>
+                <a class="contactInfos" id="contactInfosGithub" href="https://github.com/gioCarv" target="_blank">
                     <img class="contactImgs" src="assets/imgs/github.png" alt="Github Icon" id="githubIconContact">
                     <div>Github </div>
                 </a>
                 <div class="contactInfos" id="contactInfosLocation" onclick="copy(event, 1)">
-                    <div class="copyText" >texto copiado</div>
+                    <div class="copyText">TEXTO COPIADO</div>
                     <img class="contactImgs" src="./assets/imgs/localização.png" id="localization">
                     <div>Jardim das Oliveira<br> São Paulo, SP</div>
                 </div>
                 <div class="contactInfos" id="contactInfosEmail" onclick="copy(event, 2)">
-                    <div class="copyText" >texto copiado</div>
+                    <div class="copyText">TEXTO COPIADO</div>
                     <img class="contactImgs" src="./assets/imgs/email.png">
-                    <div>giocarvalho.dev@gmail.com</div>
+                    <div>giocarvalho.dev<br>@gmail.com</div>
                 </div>
             </div>
         </div>
@@ -213,6 +281,10 @@
 <!-- <script src="js/scrollDown.js"></script> -->
 <!-- <script src="js/submit.js"></script>    -->
 <script src="js/main.js" type="module"> </script>
+<!-- <script src="js/animationProjects.js"> </script> -->
+<!-- <script src="js/moreInfo.js"> </script> -->
+<!-- <script src="js/showMore.js"> </script> -->
+<!-- <script src="js/menuDropDown.js"> </script> -->
 
 </body>
 <style>
