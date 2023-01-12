@@ -265,7 +265,6 @@
         padding-left: 30px;
     }
     #homeVerticalShadow {
-        /* display:unset; */
         display: flex;
         text-align: center;
         justify-content: center;
@@ -283,5 +282,10 @@
     }
     .home--contactButton {
         margin-left: 5px ;
+    }
+}
+@media (max-width: 340px) {
+    :root {
+        --size-fontName: 30px;
     }
 }

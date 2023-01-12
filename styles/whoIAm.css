@@ -99,3 +99,9 @@
         -webkit-line-clamp: 26; 
     }
 }
+
+@media (max-width: 340px) {
+    .textBox{
+        font-size: 15px;
+    }
+}
