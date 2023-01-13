@@ -13,8 +13,6 @@
     position: fixed;
     display: flex;
     border-bottom: 2px solid gray;
-    /* color: azure; */
-    /* color:burlywood; */
     color:rgb(221, 190, 11);
     justify-content: space-between;
     font-weight: 400;
@@ -31,8 +29,6 @@
     border-radius: 50%;
     background-color: transparent;
     box-shadow: 6.25px 1.25px 0px 7.5px gray, 11px 16.5px 7.5px 0px rgb(58, 57, 57), 0px 16.25px 7.5px 0px rgb(58, 57, 57) ;
-    /* box-shadow: 25px 10px 10px 10px gray; */
-    /* animation: moon 1s infinite alternate; */
 }
 #logo::after {
     box-sizing: border-box;

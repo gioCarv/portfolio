@@ -28,7 +28,7 @@ export const menuClick = () => {
         }
     })
     window.addEventListener('resize', ()=>{
-        if(window.screen.width > 900){
+        if(window.innerWidth > 900){
             swapVisible(true)
         }else{
             swapVisible(false)

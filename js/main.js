@@ -13,11 +13,11 @@ import {resetVideo} from "./geral/resetProjectVideo.js"
 resetVideo()
 menuClick()
 showMore()
-const myName = document.getElementById('name')
-write(myName, 180, 1100)
 darkMode()
 moreInfos()
 
+const myName = document.getElementById('name')
+write(myName, 180, 1100)
 externalLink('project1', 'https://projectnetflix.netlify.app/')
 externalLink('githubProjectNetflix', 'https://github.com/gioCarv/nodejs-netflix','https://github.com/gioCarv/netflix-front')
 externalLink('githubPortifolio', 'https://github.com/gioCarv/portifolio')

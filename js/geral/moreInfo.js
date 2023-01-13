@@ -10,18 +10,25 @@ export const moreInfos = () =>{
         let newPath = path.split('@')[0] + '@'        
         let adjacentElement = document.getElementById(`infoProject${number}`)
         element.addEventListener('click', (event)=>{
-            if (adjacentElement.style.display == 'flex'){
-                projectVideo.style.display = 'none'
+            if (adjacentElement.className == 'infoProjectVisible'){
+                projectVideo.className = 'projectVideo'
                 projectVideo.pause()
                 projectVideo.currentTime = 0;
                 image.setAttribute('src',`${newPath}1.png` )    
-                adjacentElement.style.display = 'none'
+                adjacentElement.className = 'infoProject'
+                console.log(adjacentElement)
             }else{
-                projectVideo.style.display = 'unset'
+                projectVideo.className = 'projectVideoVisible'
                 projectVideo.play()
                 image.setAttribute('src',`${newPath}2.png` )
-                adjacentElement.style.display = 'flex'
+                adjacentElement.className = 'infoProjectVisible'
+                console.log(adjacentElement)
             }
+        })
+        window.addEventListener('resize', ()=>{
+            image.setAttribute('src',`${newPath}1.png` )    
+            adjacentElement.className = 'infoProject'
+            projectVideo.className = 'projectVideo'
         })
     })
 }
