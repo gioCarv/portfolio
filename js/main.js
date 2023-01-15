@@ -20,8 +20,8 @@ const myName = document.getElementById('name')
 write(myName, 180, 1100)
 externalLink('project1', 'https://projectnetflix.netlify.app/')
 externalLink('githubProjectNetflix', 'https://github.com/gioCarv/nodejs-netflix','https://github.com/gioCarv/netflix-front')
-externalLink('githubPortifolio', 'https://github.com/gioCarv/portifolio')
-externalLink('project2', 'https://giocarv.github.io/portifolio/')
+externalLink('githubPortfolio', 'https://github.com/gioCarv/portfolio')
+externalLink('project2', 'https://giocarv.github.io/portfolio/')
 
 
 
